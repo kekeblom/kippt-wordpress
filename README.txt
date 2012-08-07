@@ -1,2 +1,2 @@
 # Wordpress Kippt widget
-A widget to diplay items from Kippt
+A widget to display items from Kippt
