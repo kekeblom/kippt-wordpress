@@ -12,6 +12,6 @@
             display_lists($data);
         }
         ?>
-        <a href="http://helsinkipromo.com"><small id="credit">Developed by Helsinki Promo</small></a>
+        <a href="http://helsinkipromo.com"><small id="credit">Widget developed by Helsinki Promo</small></a> <!-- Remove this to get rid of the credit link -->
     </ul>
 </div>
