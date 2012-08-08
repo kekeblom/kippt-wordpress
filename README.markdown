@@ -4,7 +4,7 @@ This widget lets you easily show your visitors on your wordpress site all the co
 It either displays all your public lists on Kippt or the most recent items you have added to Kippt.
 
 ## Installation
-1. Get the zip from [Here](#TODO)
+1. Get the zip [Here](https://github.com/kekeblom/kippt-wordpress/raw/master/kippt-widget.zip)
 2. Upload, install and activate it on your Wordpress blog or site like any other plugin
 3. Go to the widget page and drag it to the widget area of your choice -- no biggie.
 4. Fill in the title, your username or email and your api token, which you can get [here](https://kippt.com/developers/#apikey).
@@ -22,3 +22,6 @@ All feature suggestions are welcome!
 ## To come
 * I'll probably add functionality to only show clips from a certain list
 * Some way to update the widget on certain intervals instead of getting the the info on every page load.
+
+
+[You can follow me on Twitter](http://twitter.com/kekeblom)
