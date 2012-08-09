@@ -1,7 +1,6 @@
 <div class="list-widget">
     <div class="list-head">
         <h3><a href="http://kippt.com/<?php echo $username; ?>"><?php echo $title; ?></a></h3>
-        <div class="list-meta">powered by <a href="http://kippt.com/">Kippt</a></div>
     </div>
     <ul>    
         <?php
@@ -12,6 +11,6 @@
             display_lists($data);
         }
         ?>
-        <a href="http://helsinkipromo.com"><small id="credit">Widget developed by Helsinki Promo</small></a> <!-- Remove this to get rid of the credit link -->
+        <?php if ($credit == '1'){ echo "<a href='http://helsinkipromo.com'><small id='credit'>Widget by Helsinki Promo</small></a>"; } ?>
     </ul>
 </div>

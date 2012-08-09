@@ -1,10 +1,10 @@
 <?php
 /*
-Plugin Name: Kippt widget
+Plugin Name: Kippt widget for Wordpress
 Plugin URI: http://helsinkipromo.com
-Description: Displays Kippt lists
+Description: Displays all public lists or most recent items added to Kippt.
 Author: Kenneth Blomqvist
-Version: 0.1
+Version: 0.15
 Author URI: http://twitter.com/kekeblom
 License:
 
@@ -58,7 +58,8 @@ class KipptWidget extends WP_Widget
 			'title' => 'What we read',
 			'username' => '',
 			'token' => '',
-			'mode' => '1' ) );
+			'mode' => '1',
+			'credit' => '0' ) );
 		$title = $instance['title'];
 		$username = $instance['username'];
 		$token = $instance['token'];
@@ -74,6 +75,13 @@ class KipptWidget extends WP_Widget
 		<label for="<?php echo $this->get_field_id('mode'); ?>">
 			<input name="<?php echo $this->get_field_name('mode'); ?>" type="radio" value="1" <?php checked( '1', $instance['mode'] ); ?> /> Shows all public lists <br />
 		</label>
+	<p>If you like the widget, consider linking back to our site:<br />
+		<label for="<?php echo $this->get_field_id('credit'); ?>">
+			<input name="<?php echo $this->get_field_name('credit'); ?>" type="radio" value="0" <?php checked( '0', $instance['credit'] ); ?> /> I rather not.<br />
+		</label>
+		<label for="<?php echo $this->get_field_id('credit'); ?>">
+			<input name="<?php echo $this->get_field_name('credit'); ?>" type="radio" value="1" <?php checked( '1', $instance['credit'] ); ?> /> Sure, add the link to the widget.<br />
+		</label>
 	</p>
 <?php		
 	}
@@ -86,6 +94,7 @@ class KipptWidget extends WP_Widget
 		$instance['username'] = $new_instance['username'];
 		$instance['token'] = $new_instance['token'];
 		$instance['mode'] = $new_instance['mode'];
+		$instance['credit'] = $new_instance['credit'];
 		return $instance;
 	}
 
@@ -99,6 +108,7 @@ class KipptWidget extends WP_Widget
 		$username = empty( $instance['username'] ) ? '' : $instance['username'];
 		$token = empty( $instance['token'] ) ? '' : $instance['token'];
 		$mode = $instance['mode'];
+		$credit = $instance['credit'];
 
 		// get lists from kippt
 		if ( $mode == '1'){
