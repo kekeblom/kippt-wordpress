@@ -80,7 +80,7 @@ class KipptWidget extends WP_Widget
 			<input name="<?php echo $this->get_field_name('credit'); ?>" type="radio" value="0" <?php checked( '0', $instance['credit'] ); ?> /> I rather not.<br />
 		</label>
 		<label for="<?php echo $this->get_field_id('credit'); ?>">
-			<input name="<?php echo $this->get_field_name('credit'); ?>" type="radio" value="1" <?php checked( '1', $instance['credit'] ); ?> /> Sure, add the link to the widget.<br />
+			<input name="<?php echo $this->get_field_name('credit'); ?>" type="radio" value="1" <?php checked( '1', $instance['credit'] ); ?> /> Sure, I would like to support a <a href="http://helsinkipromo.com">small business</a> from Finland.<br />
 		</label>
 	</p>
 <?php		
